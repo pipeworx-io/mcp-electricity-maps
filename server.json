@@ -3,7 +3,7 @@
   "name": "io.github.pipeworx-io/electricity-maps",
   "title": "Electricity Maps",
   "description": "Electricity Maps MCP — real-time electricity-grid carbon intensity + power generation mix for 200+…",
-  "version": "0.1.4",
+  "version": "0.2.0",
   "websiteUrl": "https://pipeworx.io/packs/electricity-maps",
   "repository": {
     "url": "https://github.com/pipeworx-io/mcp-electricity-maps",

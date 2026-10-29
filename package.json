@@ -1,12 +1,20 @@
 {
   "name": "@pipeworx/mcp-electricity-maps",
-  "version": "0.1.4",
+  "version": "0.2.0",
   "description": "Electricity Maps MCP — real-time electricity-grid carbon intensity + power generation mix for 200+ zones worldwide (electricitymaps.com).",
   "type": "module",
-  "main": "src/index.ts",
-  "types": "src/index.ts",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./tools.json": "./tools.json",
+    "./package.json": "./package.json"
+  },
   "bin": {
     "mcp-electricity-maps": "bin/cli.js"
+  },
+  "files": ["bin/", "lib/", "tools.json", "server.json"],
+  "engines": {
+    "node": ">=18"
   },
   "keywords": ["mcp", "mcp-server", "model-context-protocol", "pipeworx", "electricity-maps"],
   "license": "MIT",
@@ -14,19 +22,12 @@
     "type": "git",
     "url": "git+https://github.com/pipeworx-io/mcp-electricity-maps.git"
   },
-  "scripts": {
-    "typecheck": "tsc --noEmit"
-  },
-  "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.30.0",
-    "tsx": "^4.19.0"
-  },
-  "devDependencies": {
-    "typescript": "^5.9.3",
-    "@cloudflare/workers-types": "^4.20260405.1"
-  },
+  "mcpName": "io.github.pipeworx-io/electricity-maps",
   "pipeworx": {
-    "sourceHash": "v1-b0ebff92c3d692fbf2e5a8d4361ae1d26212fe47afe61df62d181efb7f7cf581",
-    "sourceCommit": "29fb434ca65fe0f61191f19c3502f583f5fb99d7"
+    "mode": "gateway",
+    "slug": "electricity-maps",
+    "gatewaySlug": "electricity-maps",
+    "sourceHash": "v1-cce234912c50dc69b938a6f1f567821dbfdd92a31af10e5cc321a5b436d4c6bc",
+    "sourceCommit": "bb047243cf27f32453103de186b8e6a8b6a1ce79"
   }
 }

@@ -1,0 +1,79 @@
+[
+  {
+    "name": "electricitymaps_carbon_intensity",
+    "description": "Carbon intensity (gCO2/kWh) for a grid zone now — the live climate cost of a kWh drawn from the local grid. Pass a zone code (e.g. \"US-CAL-CISO\", \"DE\", \"FR\", \"GB\") or lat+lon. Example: electricitymaps_carbon_intensity({ zone: \"DE\", _apiKey: \"your-key\" })",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "zone": {
+          "type": "string",
+          "description": "Grid zone code, e.g. \"US-CAL-CISO\" (California ISO), \"DE\" (Germany), \"FR\" (France), \"GB\" (Great Britain). Alternatively pass lat + lon."
+        },
+        "lat": {
+          "type": "number",
+          "description": "Latitude (use with lon instead of zone)"
+        },
+        "lon": {
+          "type": "number",
+          "description": "Longitude (use with lat instead of zone)"
+        },
+        "_apiKey": {
+          "type": "string",
+          "description": "Electricity Maps API key (free trial / developer tier at electricitymaps.com)"
+        }
+      },
+      "required": [
+        "_apiKey"
+      ]
+    }
+  },
+  {
+    "name": "electricitymaps_power_breakdown",
+    "description": "Power generation mix for a zone — the latest breakdown of electricity by source (nuclear, wind, solar, hydro, coal, gas, ...) plus fossil-free and renewable percentages. Pass a zone code (e.g. \"US-CAL-CISO\", \"DE\", \"FR\", \"GB\") or lat+lon. Example: electricitymaps_power_breakdown({ zone: \"FR\", _apiKey: \"your-key\" })",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "zone": {
+          "type": "string",
+          "description": "Grid zone code, e.g. \"US-CAL-CISO\" (California ISO), \"DE\" (Germany), \"FR\" (France), \"GB\" (Great Britain). Alternatively pass lat + lon."
+        },
+        "lat": {
+          "type": "number",
+          "description": "Latitude (use with lon instead of zone)"
+        },
+        "lon": {
+          "type": "number",
+          "description": "Longitude (use with lat instead of zone)"
+        },
+        "_apiKey": {
+          "type": "string",
+          "description": "Electricity Maps API key (free trial / developer tier at electricitymaps.com)"
+        }
+      },
+      "required": [
+        "_apiKey"
+      ]
+    }
+  },
+  {
+    "name": "electricitymaps_carbon_forecast",
+    "description": "Carbon-intensity forecast for a zone — upcoming hourly gCO2/kWh predictions, useful for scheduling loads when the grid is cleanest. Requires a paid Electricity Maps plan. Pass a zone code (e.g. \"US-CAL-CISO\", \"DE\", \"FR\", \"GB\"). Example: electricitymaps_carbon_forecast({ zone: \"GB\", _apiKey: \"your-key\" })",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "zone": {
+          "type": "string",
+          "description": "Grid zone code, e.g. \"US-CAL-CISO\" (California ISO), \"DE\" (Germany), \"FR\" (France), \"GB\" (Great Britain). Alternatively pass lat + lon."
+        },
+        "_apiKey": {
+          "type": "string",
+          "description": "Electricity Maps API key (forecast requires a paid plan)"
+        }
+      },
+      "required": [
+        "zone",
+        "_apiKey"
+      ]
+    }
+  }
+]

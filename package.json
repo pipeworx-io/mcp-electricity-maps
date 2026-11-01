@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-electricity-maps",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Electricity Maps MCP — real-time electricity-grid carbon intensity + power generation mix for 200+ zones worldwide (electricitymaps.com).",
   "type": "module",
   "main": "lib/index.js",
@@ -27,7 +27,7 @@
     "mode": "gateway",
     "slug": "electricity-maps",
     "gatewaySlug": "electricity-maps",
-    "sourceHash": "v1-cce234912c50dc69b938a6f1f567821dbfdd92a31af10e5cc321a5b436d4c6bc",
-    "sourceCommit": "bb047243cf27f32453103de186b8e6a8b6a1ce79"
+    "sourceHash": "v1-675aa8067a2b7a2b3fd7d92ae929497c0d9f379d1013b3a80a8fcff634978535",
+    "sourceCommit": "e707a4bb6209f432984c0a83bf64b3138130db89"
   }
 }
